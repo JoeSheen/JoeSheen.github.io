@@ -1,7 +1,44 @@
+:root {
+	--yankees-blue: #19323C;
+	--baby-powder: #FFFFFC;
+	--sunset-orange: #FE5F55;
+	--ceil: #999Ac6;
+}
+
 body {
-  background-color: #2484CC;
+	background-color: var(--yankees-blue);
+	font-family: "Lucida Console", "Courier New", monospace;
+	font-size: 1rem;
+	color: var(--baby-powder);
+	padding: 1rem;
 }
 
 a {
-	text-decoration:none;
+	color: var(--sunset-orange);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--ceil);
+	text-decoration: underline;
+	text-decoration-color: var(--ceil);
+}
+
+.divider {
+	border: 1px solid var(--sunset-orange);
+	border-radius: 15px;
+}
+
+.center-container {
+	padding-top: 15px;
+	text-align: center;
+}
+
+.embed-cv {
+	height: 100svh;
+	width: 95svw;
+}
+
+.download-link {
+	padding-top: 15px;
 }
