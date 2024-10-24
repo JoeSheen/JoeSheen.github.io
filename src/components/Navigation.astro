@@ -32,3 +32,27 @@ const { link, label } = Astro.props
         </div>
     </nav>
 </div>
+<style>
+    .title, .navbar {
+        text-align: center;
+    }
+
+    .navbar ul {
+        display: inline-block;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .navbar li {
+        float: left;
+    }
+
+    .navbar li a {
+        padding: 16px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 18px;
+    }
+</style>

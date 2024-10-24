@@ -15,3 +15,34 @@
 		<slot />
 	</body>
 </html>
+
+<style is:global>
+	:root {
+		--platinum: #EAE6E5;
+		--night: #12130F;
+		--lapis-lazuli: #145C9E;
+		--munsell-blue: #1B9AAA;
+		--malachite: #04E752;
+	}
+
+	body {
+		background-color: var(--platinum);
+		color: var(--night);
+		font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		padding: 1rem;
+	}
+
+	a {
+		color: var(--lapis-lazuli);
+	}
+
+	a:hover {
+		color: var(--malachite);
+		text-decoration: none;
+	}
+
+	.horizontal {
+		border: .15px solid var(--night);
+		border-radius: 20px;
+	}
+</style>

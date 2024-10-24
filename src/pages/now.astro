@@ -5,4 +5,71 @@ import Navigation from '../components/Navigation.astro';
 
 <Layout>
     <Navigation label='Home' link='/' />
+    <div class="content-wrapper">
+        <hr class="horizontal" />
+        <div class="now-container">
+            <h2>/Now</h2>
+            <div class="now-introduction">
+                <p>
+                    This page was inspired by <a href="https://sive.rs/" target="_blank">Derek Sivers</a>'s article <a href="https://sive.rs/nowff" target="_blank">The /Now page movement</a> and the community that has embraced the idea of including a <a href="https://nownownow.com/" target="_blank">now page</a> on thier personal websites and blogs.
+                    The purpose of this page is to show what I'm focussed on at this point in my life, and will be updated over time.
+                </p>
+            </div>
+            <div class="exercise">
+                <h3>Exercise</h3>
+                <p>
+                    At 18:24 on the 21/10/2024 I deiced to start running with the goal of completing the <a href="https://www.nhs.uk/live-well/exercise/get-running-with-couch-to-5k/" target="_blank">Couch to 5K</a> program.
+                    I plan to use this section of the page to track my progress as I aim to complete this goal:
+                    <table class="outer-table">
+                        <tr>
+                            <th>Week</th>
+                            <th>Runs</th>
+                        </tr>
+                        <tr class="row">
+                            <td class="center-text">Week 1</td>
+                            <td>
+                                <table class="innter-table">
+                                    <tr>
+                                        <td>
+                                            60 sec of running (x8) and 90 sec walking (x7): <span>&#10003;</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            60 sec of running (x8) and 90 sec walking (x7): <span>&#10003;</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            60 sec of running (x8) and 90 sec walking (x7): <span></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </p>
+            </div>
+            <div></div>
+        </div>
+        <hr class="horizontal"/>
+    </div>
 </Layout>
+
+<style>
+    .outer-table {
+        border:1px solid var(--night);
+        width: 45%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .innter-table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .center-text {
+        text-align: center;
+    }
+</style>
