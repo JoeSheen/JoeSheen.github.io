@@ -12,64 +12,160 @@ import Navigation from '../components/Navigation.astro';
             <div class="now-introduction">
                 <p>
                     This page was inspired by <a href="https://sive.rs/" target="_blank">Derek Sivers</a>'s article <a href="https://sive.rs/nowff" target="_blank">The /Now page movement</a> and the community that has embraced the idea of including a <a href="https://nownownow.com/" target="_blank">now page</a> on thier personal websites and blogs.
-                    The purpose of this page is to show what I'm focussed on at this point in my life, and will be updated over time.
+                    The purpose of this page is to show what I'm focussed on (in no particular order) at this point in my life, and will be updated over time.
                 </p>
             </div>
-            <div class="exercise">
-                <h3>Exercise</h3>
+            <div class="running-5k">
+                <h3>Focus 1 - Running 5K</h3>
                 <p>
                     At 18:24 on the 21/10/2024 I deiced to start running with the goal of completing the <a href="https://www.nhs.uk/live-well/exercise/get-running-with-couch-to-5k/" target="_blank">Couch to 5K</a> program.
                     I plan to use this section of the page to track my progress as I aim to complete this goal:
-                    <table class="outer-table">
+                    <table>
                         <tr>
                             <th>Week</th>
                             <th>Runs</th>
+                            <th>Date</th>
                         </tr>
-                        <tr class="row">
-                            <td class="center-text">Week 1</td>
+                        <tr>
+                            <td class="week">Week 1</td>
                             <td>
-                                <table class="innter-table">
-                                    <tr>
-                                        <td>
-                                            60 sec of running (x8) and 90 sec walking (x7): <span>&#10003;</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            60 sec of running (x8) and 90 sec walking (x7): <span>&#10003;</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            60 sec of running (x8) and 90 sec walking (x7): <span></span>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <ol>
+                                    <li>
+                                        60 seconds of running (x8) and 90 seconds walking (x7): 
+                                        <span class="check-mark">
+                                            &#10003;
+                                        </span>
+                                    </li>
+                                    <li>
+                                        60 seconds of running (x8) and 90 seconds walking (x7):
+                                        <span class="check-mark">
+                                            &#10003;
+                                        </span>
+                                    </li>
+                                    <li>
+                                        60 seconds of running (x8) and 90 seconds walking (x7):
+                                        <span class="check-mark">
+                                            &#10003;
+                                        </span>
+                                    </li>
+                                </ol>
+                            </td>
+                            <td>
+                                21/10/2024 - 25/10/2024
                             </td>
                         </tr>
+                        <tr>
+                            <td class="week">Week 2</td>
+                            <td>
+                                <ol>
+                                    <li>
+                                        90 seconds running (x8) and 2 minutes walking (x7):
+                                        <span class="ballot-box">
+                                            &#x2610;
+                                        </span>
+                                    </li>
+                                    <li>
+                                        90 seconds running (x8) and 2 minutes walking (x7):
+                                        <span class="ballot-box">
+                                            &#x2610;
+                                        </span>
+                                    </li>
+                                    <li>
+                                        90 seconds running (x8) and 2 minutes walking (x7):
+                                        <span class="ballot-box">
+                                            &#x2610;
+                                        </span>
+                                    </li>
+                                </ol>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="week">Week 3</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="week">Week 4</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="week">Week 5</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="week">Week 6</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="week">Week 7</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="week">Week 8</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="week">Week 9</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!--tr>
+                            <td colspan="100%"></td>
+                        </tr-->
                     </table>
                 </p>
             </div>
-            <div></div>
+            <div class="career">
+                <h3>Focus 2 - Career</h3>
+                <p></p>
+            </div>
+            <div class="home-office">
+                <h3>Focus 3 - Home Office &#38; Equipment</h3>
+                <p></p>
+            </div>
+            <div class="financial">
+                <h3>Focus 4 - Financial</h3>
+                <p></p>
+            </div>
         </div>
         <hr class="horizontal"/>
     </div>
 </Layout>
 
 <style>
-    .outer-table {
-        border:1px solid var(--night);
-        width: 45%;
+    table {
+        min-width: 35%;
+    }
+    
+    table, th, td {
+        border: 1px solid var(--night);
+        border-collapse: collapse;
+        padding: 20px;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .innter-table {
-        margin-left: auto;
-        margin-right: auto;
+    tr:nth-child(odd) {
+       background-color: rgba(20, 92, 158, 0.65);
     }
 
-    .center-text {
+    .week {
         text-align: center;
+    }
+
+    .check-mark {
+        color: var(--malachite);
+        font-weight:800;
+    }
+
+    .ballot-box {
+        color: var(--night);
+        font-weight: 800;
     }
 </style>
