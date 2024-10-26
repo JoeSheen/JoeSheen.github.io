@@ -11,15 +11,15 @@ import Navigation from '../components/Navigation.astro';
             <h2>/Now</h2>
             <div class="now-introduction">
                 <p>
-                    This page was inspired by <a href="https://sive.rs/" target="_blank">Derek Sivers</a>'s article <a href="https://sive.rs/nowff" target="_blank">The /Now page movement</a> and the community that has embraced the idea of including a <a href="https://nownownow.com/" target="_blank">now page</a> on thier personal websites and blogs.
-                    The purpose of this page is to show what I'm focussed on (in no particular order) at this point in my life, and will be updated over time.
+                    This page was inspired by <a href="https://sive.rs/" target="_blank">Derek Sivers</a>'s article <a href="https://sive.rs/nowff" target="_blank">The /Now page movement</a> and the community that has embraced the idea of including a <a href="https://nownownow.com/" target="_blank">now page</a> on their personal websites and blogs.
+                    The purpose of this page is to show what I'm focused on (in no particular order) at this point in my life and will be updated over time.
                 </p>
             </div>
             <div class="running-5k">
                 <h3>Focus 1 - Running 5K</h3>
                 <p>
-                    At 18:24 on the 21/10/2024 I deiced to start running with the goal of completing the <a href="https://www.nhs.uk/live-well/exercise/get-running-with-couch-to-5k/" target="_blank">Couch to 5K</a> program.
-                    I plan to use this section of the page to track my progress as I aim to complete this goal:
+                    At 18:24 on the 21/10/2024, I decided to start running with the goal of completing the <a href="https://www.nhs.uk/live-well/exercise/get-running-with-couch-to-5k/" target="_blank">Couch to 5K</a> program.
+                    I plan to use this section of the page to track my progress:
                     <table>
                         <tr>
                             <th>Week</th>
@@ -123,16 +123,21 @@ import Navigation from '../components/Navigation.astro';
             </div>
             <div class="career">
                 <h3>Focus 2 - Career</h3>
-                <p></p>
+                <p>
+                    I'm currently at Polaris Software as a software engineer, focusing on delivering new features for the latest version of the Chronicle operational management system.
+                    <ul>
+                        <li>I'm concentrated on developing my skills as a software engineer and progressing towards my next promotion.</li>
+                    </ul>
+                </p>
             </div>
-            <div class="home-office">
+            <!--<div class="home-office">
                 <h3>Focus 3 - Home Office &#38; Equipment</h3>
-                <p></p>
+                <p>I recently </p>
             </div>
             <div class="financial">
                 <h3>Focus 4 - Financial</h3>
                 <p></p>
-            </div>
+            </div>-->
         </div>
         <hr class="horizontal"/>
     </div>
@@ -140,7 +145,7 @@ import Navigation from '../components/Navigation.astro';
 
 <style>
     table {
-        min-width: 35%;
+        min-width: 35vw;
     }
     
     table, th, td {
@@ -167,5 +172,14 @@ import Navigation from '../components/Navigation.astro';
     .ballot-box {
         color: var(--night);
         font-weight: 800;
+    }
+
+    .career ul {
+       margin-top: 3px;
+       margin-bottom: 20px;
+    }
+
+    .career p {
+        margin-bottom: 5px;
     }
 </style>
