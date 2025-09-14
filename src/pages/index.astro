@@ -1,81 +1,155 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import Navigation from "../components/Navigation.astro"
+import Navigation from "../components/Navigation.astro";
+import Layout from "../layouts/Layout.astro";
+
+const lastModifiedDate = new Date().toLocaleString("en-GB");
 ---
 
 <Layout>
-	<div class="content-container">
-		<Navigation label="/Now" link="/now/"/>
-		<div class="content-wrapper">
-			<hr class="horizontal" />
-			<div class="about-container">
-				<h2>About</h2>
-				<div class="about-text">
-					<p>
-						Hi, I'm Joe Sheen, and I'm currently employed as a software engineer at <a href="https://polarissoftware.com/" target="_blank">Polaris Software</a> (formerly JML Software Solutions Ltd).
-						During my time at Polaris, I've been working on features for the latest version of the Chronicle operational management system and web-based armoury applications.
-					</p>
-				</div>
-				<div class="about-image">
-					<!-- Image will go here -->
-				</div>
-				<div class="interests">
-					<h3>Interests</h3>
-					<p>Areas of Software Engineering and Development that I'm currenlty interested in:</p>
-					<ul>
-						<li>Java</li>
-						<li>Spring Boot</li>
-						<li>TypeScript</li>
-						<li>Angular</li>
-						<li>Go</li>
-						<li>Python</li>
-						<li>Testing</li>
-						<li>Cyber Security</li>
-						<li>Automation</li>
-					</ul>
-				</div>
-				<!--div class="shoejs">
-					<h3>Why shoejs?</h3>
-				</div-->
-			</div>
-			<div class="cv-container">
-				<h2>Curriculum Vitae</h2>
-				<div class="cv-wrapper">
-					<object type="application/pdf" data="/curriculumVitae.pdf" title="Curriculum Vitae" aria-label="Curriculum Vitae Viewer" aria-labelledby="curriculum-vitae pdf">
-						Joe Sheen Curriculum Vitae
-					</object>
-					<div class="download-link">
-						<a href="/curriculumVitae.pdf" download="JoeSheenCV.pdf">
-							Download
-						</a>
-					</div>
-				</div>
-			</div>
-			<hr class="horizontal" />
-		</div>
-	</div>
+  <div class="sticky-nav" -->
+    <Navigation label="/Now" link="/now" />
+  </div>
+  <div class="content-wrapper">
+    <div class="content-section">
+      <div class="about-me section-syle">
+        <h2>About Me</h2>
+        <p>Hi 👋, I'm Joe Sheen</p>
+        <!--p>
+          Hi 👋, I'm Joe Sheen, a Software Engineer with a passion for building
+          ....
+        </p>
+        <p>
+          Hi 👋, I'm Joe Sheen, a Software Engineer with a passion for building
+          clean, efficient, and scalable software systems. During my profetional
+          career I have worked on a full-stack web application, and am currently
+          working on an internal tool for...
+        </p-->
+        <!--div class="button-wrapper">
+          <a href="/joseph_sheen_curriculum_vitae.pdf" target="_blank">
+            <button class="cv-button">📄 View My CV</button>
+          </a>
+        </div-->
+      </div>
+      <!--div class="now section-syle">
+        <h2>/Now</h2>
+        <p>
+          This section of the page was inspired by Derek Sivers's article The
+          /Now page movement and the community that has embraced the idea of
+          including a now page on their personal websites and blogs. The purpose
+          of this page is to show what I'm focused on (in no particular order)
+          at this point in my life and will be updated over time.
+        </p>
+      </div-->
+      <div class="why-shoejs section-syle">
+        <h2>Why shoejs</h2>
+        <p>
+          My full first name is Joseph (but I prefer J<span class="name-span"
+            >oe</span
+          >), and my last name is <span class="name-span">Sh</span>een. Back at
+          university, a course mate started calling me "<span class="name-span"
+            >Shoe</span
+          >" - a mashup of my first and last names. I liked it, so it stuck.
+        </p>
+        <p>
+          Later on, I added "<span class="name-span">js</span>" to the end.
+          Those are my initials, but also the file extension for JavaScript
+          source code, which felt pretty fitting for a software engineer.
+        </p>
+        <p>
+          When I was setting up this site, I wanted a domain that was short,
+          unique, easy to share, and most importantly something I'd actually
+          remember. After browsing around, I found that <strong>shoejs</strong> was
+          not only available, but also cheaper than something like <strong
+            >joesheen</strong
+          >, so I went with it. Simple as that.
+        </p>
+      </div>
+    </div>
+    <hr class="horizontal-line" />
+    <div class="date-modified">
+      <span
+        >Last Modified:
+        <span>{lastModifiedDate}</span>
+      </span>
+    </div>
+  </div>
 </Layout>
 
 <style>
-	object {
-		min-height:100vh;
-		width:100%
-	}
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
 
-	.download-link {
-		text-align: center;
-		padding: 25px 0 20px 0;
-	}
+  .section-syle {
+    border: solid;
+    border-radius: 0.5rem;
+    border-color: var(--onyx);
+  }
 
-	.download-link a {
-		font-weight:700;
-		text-decoration: none;
-		border: 1px solid var(--lapis-lazuli);
-		border-radius: 10px;
-		padding: 14px;
-	}
+  .section-syle p {
+    padding: 0 15px 0 15px;
+  }
 
-	.download-link a:hover {
-		border: 1px solid var(--malachite);
-	}
+  .about-me {
+    margin-top: 20px;
+  }
+
+  .button-wrapper {
+    margin: 0 auto;
+    width: fit-content;
+    padding-bottom: 10px;
+  }
+
+  .cv-button {
+    background-color: var(--onyx);
+    color: var(--sandy-brown);
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition:
+      background-color 0.3s ease,
+      transform 0.2s ease;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .cv-button:hover {
+    background-color: var(--sandy-brown);
+    color: var(--onyx);
+    transform: translateY(-2px);
+  }
+
+  .now {
+    margin-top: 10px;
+  }
+
+  .why-shoejs {
+    margin-top: 10px;
+  }
+
+  .name-span {
+    font-style: italic;
+    color: var(--tomato);
+  }
+
+  .horizontal-line {
+    border: none;
+    border-radius: 8px;
+    height: 3px;
+    background-color: var(--onyx);
+    margin: 15px auto 5px auto;
+  }
+
+  .date-modified {
+    text-align: right;
+    padding-right: 5px;
+    font-size: small;
+  }
 </style>
