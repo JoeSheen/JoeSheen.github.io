@@ -6,71 +6,80 @@ const lastModifiedDate = new Date().toLocaleString("en-GB");
 ---
 
 <Layout>
-  <div class="sticky-nav" -->
-    <Navigation label="/Now" link="/now" />
-  </div>
-  <div class="content-wrapper">
-    <div class="content-section">
-      <div class="about-me section-syle">
-        <h2>About Me</h2>
-        <p>Hi 👋, I'm Joe Sheen</p>
-        <!--p>
-          Hi 👋, I'm Joe Sheen, a Software Engineer with a passion for building
-          ....
-        </p>
-        <p>
-          Hi 👋, I'm Joe Sheen, a Software Engineer with a passion for building
-          clean, efficient, and scalable software systems. During my profetional
-          career I have worked on a full-stack web application, and am currently
-          working on an internal tool for...
-        </p-->
-        <!--div class="button-wrapper">
-          <a href="/joseph_sheen_curriculum_vitae.pdf" target="_blank">
-            <button class="cv-button">📄 View My CV</button>
-          </a>
+  <div class="page-wrapper">
+    <div class="sticky-nav">
+      <Navigation label="/Now" link="/now" />
+    </div>
+    <div class="content-wrapper">
+      <div class="content-section">
+        <div class="about-me section-style">
+          <h2>About Me</h2>
+          <p>
+            Hi there! 👋 I'm Joe Sheen, a Software Engineer based in Bristol. I
+            work at <a href="https://oceanbluesoftware.co.uk/" target="_blank"
+              >Ocean Blue Software</a
+            >, where I'm focused on developing a Kotlin-based automation tool
+            and testing suite to validate smart TV software and applications
+            before they're submitted for certification. As part of the team, I
+            contribute to streamlining workflows, improving efficiency, and
+            ensuring higher-quality products. Want to know more about my
+            professional background? Check out my CV:
+          </p>
+          <div class="button-wrapper">
+            <a
+              href="/joseph_sheen_curriculum_vitae.pdf"
+              target="_blank"
+              class="cv-button">📄 View My CV</a
+            >
+          </div>
+          <p>
+            Outside of work, I'm passionate about staying active, with running
+            and gym workouts being my main focus. I also enjoy exploring
+            Bristol's vibrant culture and experimenting with new technologies.
+            In my downtime, you'll usually find me reading, listening to
+            podcasts, or enjoying music. I love socialising and spending time
+            with friends, whether it's grabbing a coffee of hanging out over the
+            weekend. Weather it's tech, fitness, or personal growth, I'm always
+            eager to learn and explore new areas.
+          </p>
+        </div>
+        <!--div class="now section-style">
+          <h2>/Now</h2>
         </div-->
-      </div>
-      <!--div class="now section-syle">
-        <h2>/Now</h2>
-        <p>
-          This section of the page was inspired by Derek Sivers's article The
-          /Now page movement and the community that has embraced the idea of
-          including a now page on their personal websites and blogs. The purpose
-          of this page is to show what I'm focused on (in no particular order)
-          at this point in my life and will be updated over time.
-        </p>
-      </div-->
-      <div class="why-shoejs section-syle">
-        <h2>Why shoejs</h2>
-        <p>
-          My full first name is Joseph (but I prefer J<span class="name-span"
-            >oe</span
-          >), and my last name is <span class="name-span">Sh</span>een. Back at
-          university, a course mate started calling me "<span class="name-span"
-            >Shoe</span
-          >" - a mashup of my first and last names. I liked it, so it stuck.
-        </p>
-        <p>
-          Later on, I added "<span class="name-span">js</span>" to the end.
-          Those are my initials, but also the file extension for JavaScript
-          source code, which felt pretty fitting for a software engineer.
-        </p>
-        <p>
-          When I was setting up this site, I wanted a domain that was short,
-          unique, easy to share, and most importantly something I'd actually
-          remember. After browsing around, I found that <strong>shoejs</strong> was
-          not only available, but also cheaper than something like <strong
-            >joesheen</strong
-          >, so I went with it. Simple as that.
-        </p>
+        <div class="why-shoejs section-style">
+          <h2>Why shoejs</h2>
+          <p>
+            My full first name is Joseph (but I prefer J<span class="name-span"
+              >oe</span
+            >), and my last name is <span class="name-span">Sh</span>een. Back
+            at university, a course mate started call me "<span
+              class="name-span">Shoe</span
+            >" - a mashup of my first and last names. I liked it, so it stuck.
+          </p>
+          <p>
+            Later on, I added "<span class="name-span">js</span>" to the end.
+            Those are my initials, but also the file extension for JavaScript
+            source code, which felt pretty fitting for a software engineer.
+          </p>
+          <p>
+            When I was setting up this site, I wanted a domain that was short,
+            unique, easy to share, and most importantly something I'd actually
+            remember. After browsing around, I found that <span
+              class="name-span">shoejs.co.uk</span
+            > was not only available, but also cheaper than something like <span
+              class="name-span">joesheen.co.uk</span
+            >, so I went with it. Simple as that.
+          </p>
+        </div>
       </div>
     </div>
-    <hr class="horizontal-line" />
-    <div class="date-modified">
-      <span
-        >Last Modified:
-        <span>{lastModifiedDate}</span>
-      </span>
+    <div class="footer">
+      <hr class="horizontal-line" />
+      <div class="date-modified">
+        <span>
+          Last Modified: <span>{lastModifiedDate}</span>
+        </span>
+      </div>
     </div>
   </div>
 </Layout>
@@ -82,17 +91,19 @@ const lastModifiedDate = new Date().toLocaleString("en-GB");
     z-index: 1000;
   }
 
-  .section-syle {
+  .section-style {
     border: solid;
     border-radius: 0.5rem;
     border-color: var(--onyx);
   }
 
-  .section-syle p {
+  .section-style p {
     padding: 0 15px 0 15px;
   }
 
-  .about-me {
+  .about-me,
+  .why-shoejs,
+  .now {
     margin-top: 20px;
   }
 
@@ -108,6 +119,7 @@ const lastModifiedDate = new Date().toLocaleString("en-GB");
     border: none;
     padding: 12px 24px;
     font-size: 16px;
+    text-decoration: none;
     border-radius: 8px;
     cursor: pointer;
     display: inline-flex;
@@ -124,14 +136,6 @@ const lastModifiedDate = new Date().toLocaleString("en-GB");
     background-color: var(--sandy-brown);
     color: var(--onyx);
     transform: translateY(-2px);
-  }
-
-  .now {
-    margin-top: 10px;
-  }
-
-  .why-shoejs {
-    margin-top: 10px;
   }
 
   .name-span {
