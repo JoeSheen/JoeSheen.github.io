@@ -1,8 +1,13 @@
 ---
+import { datetimeRegex } from "astro:schema";
 import Navigation from "../components/Navigation.astro";
 import Layout from "../layouts/Layout.astro";
 
 const lastModifiedDate = new Date().toLocaleString("en-GB");
+
+const dateToString = (date: Date): string => {
+  return `${date.getDate()} ${date.toLocaleString("en-US", { month: "short" })} ${date.getFullYear()}`;
+};
 ---
 
 <Layout>
@@ -26,10 +31,8 @@ const lastModifiedDate = new Date().toLocaleString("en-GB");
             professional background? Check out my CV:
           </p>
           <div class="button-wrapper">
-            <a
-              href="/joseph_sheen_curriculum_vitae.pdf"
-              target="_blank"
-              class="cv-button">📄 View My CV</a
+            <a href="/Joseph_Sheen_CV.pdf" target="_blank" class="cv-button"
+              >📄 View My CV</a
             >
           </div>
           <p>
@@ -43,6 +46,26 @@ const lastModifiedDate = new Date().toLocaleString("en-GB");
             eager to learn and explore new areas.
           </p>
         </div>
+        <!--div class="personal-projects section-style">
+          <h2>Personal Projects & Certificates</h2>
+          <p>
+            I have a few personal projects & certificate which I have worked on
+            in my own time (projects can also be found on my GitHub).
+          </p>
+          <div class="box" style="background-color: #80abdd3d">
+            <p>
+              <a
+                href="https://www.coursera.org/account/accomplishments/verify/VF56DJQRF2H3"
+                target="_blank">Kotlin for Java Developers</a
+              >
+            </p>
+          </div>
+          <div class="box" style="background-color: #80abdd3d">
+            <p>
+              <a>vault_rs</a>
+            </p>
+          </div>
+        </div-->
         <!--div class="now section-style">
           <h2>/Now</h2>
         </div-->
@@ -71,6 +94,135 @@ const lastModifiedDate = new Date().toLocaleString("en-GB");
             >, so I went with it. Simple as that.
           </p>
         </div>
+        <div class="reading-tracker section-style">
+          <h2>Reading tracker</h2>
+          <div class="table-wrapper">
+            <table class="table-style">
+              <!--caption>caption</caption-->
+              <tr>
+                <th>
+                  <span>#</span>
+                </th>
+                <th>
+                  <span>Book Title</span>
+                </th>
+                <th>
+                  <span>Author</span>
+                </th>
+                <th>
+                  <span>Pages</span>
+                </th>
+                <th>
+                  <span>Published</span>
+                </th>
+                <th>
+                  <span>Start Date</span>
+                </th>
+                <th>
+                  <span>End Date</span>
+                </th>
+                <th>
+                  <span>Rating</span>
+                </th>
+              </tr>
+              <tr>
+                <td><span>1</span></td>
+                <td
+                  ><span
+                    >Chip War: The Fight for the World's Most Critical
+                    Technology</span
+                  >
+                </td>
+                <td>
+                  <span>Chris Miller</span>
+                </td>
+                <td><span>464</span></td>
+                <td><span>{dateToString(new Date(2023, 7, 31))}</span></td>
+                <td>
+                  <span>N/A</span>
+                </td>
+                <td>
+                  <span>{dateToString(new Date(2025, 9, 1))}</span>
+                </td>
+                <td>
+                  <span>6.5/10</span>
+                </td>
+              </tr>
+              <tr>
+                <td><span>2</span></td>
+                <td><span>Greenlights</span></td>
+                <td><span>Matthew McConaughey</span></td>
+                <td><span>320</span></td>
+                <td>
+                  <span>
+                    {dateToString(new Date(2020, 9, 20))}
+                  </span>
+                </td>
+                <td>
+                  <span>
+                    {dateToString(new Date(2025, 9, 3))}
+                  </span>
+                </td>
+                <td>
+                  <span>{dateToString(new Date(2025, 9, 20))}</span>
+                </td>
+                <td><span>7.7/10</span></td>
+              </tr>
+              <tr>
+                <td><span>3</span></td>
+                <td><span> The Almanack of Naval Ravikant</span></td>
+                <td><span>Eric Jorgenson</span></td>
+                <td><span>242</span></td>
+                <td>
+                  <span>
+                    {dateToString(new Date(2020, 8, 8))}
+                  </span>
+                </td>
+                <td>
+                  <span>
+                    {dateToString(new Date(2025, 9, 23))}
+                  </span>
+                </td>
+                <td>
+                  <span>
+                    {dateToString(new Date(2025, 9, 31))}
+                  </span>
+                </td>
+                <td><span>7.3/10</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <span>4</span>
+                </td>
+                <td>
+                  <span>Human Compatible: AI and the Problem of Control</span>
+                </td>
+                <td>
+                  <span>Stuart Russell</span>
+                </td>
+                <td>
+                  <span>384</span>
+                </td>
+                <td>
+                  <span>
+                    {dateToString(new Date(2020, 3, 30))}
+                  </span>
+                </td>
+                <td>
+                  <span>
+                    {dateToString(new Date(2025, 10, 2))}
+                  </span>
+                </td>
+                <td>
+                  <span>Reading</span>
+                </td>
+                <td>
+                  <span>TBD</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
     <div class="footer">
@@ -91,6 +243,10 @@ const lastModifiedDate = new Date().toLocaleString("en-GB");
     z-index: 1000;
   }
 
+  .content-section {
+    padding: 30px;
+  }
+
   .section-style {
     border: solid;
     border-radius: 0.5rem;
@@ -101,9 +257,14 @@ const lastModifiedDate = new Date().toLocaleString("en-GB");
     padding: 0 15px 0 15px;
   }
 
-  .about-me,
+  .about-me {
+    margin-top: -20px;
+  }
+
+  .personal-projects,
   .why-shoejs,
-  .now {
+  .now,
+  .reading-tracker {
     margin-top: 20px;
   }
 
@@ -138,9 +299,43 @@ const lastModifiedDate = new Date().toLocaleString("en-GB");
     transform: translateY(-2px);
   }
 
+  /*.box {
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 25px 25px;
+    background: #fff;
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0 14px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }*/
+
   .name-span {
     font-style: italic;
     color: var(--tomato);
+  }
+
+  .table-wrapper {
+    overflow-x: scroll;
+    margin: 5px;
+  }
+
+  table,
+  th,
+  td {
+    border: 0.5px solid var(--onyx);
+    border-collapse: collapse;
+    margin: 15px auto;
+    padding: 7px;
+    text-align: center;
+  }
+
+  tr:hover {
+    background-color: var(--onyx);
+    color: var(--sandy-brown);
   }
 
   .horizontal-line {
@@ -155,5 +350,6 @@ const lastModifiedDate = new Date().toLocaleString("en-GB");
     text-align: right;
     padding-right: 5px;
     font-size: small;
+    padding-bottom: 10px;
   }
 </style>
