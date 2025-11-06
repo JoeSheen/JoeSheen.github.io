@@ -46,26 +46,58 @@ const dateToString = (date: Date): string => {
             eager to learn and explore new areas.
           </p>
         </div>
-        <!--div class="personal-projects section-style">
+        <div class="personal-projects section-style">
           <h2>Personal Projects & Certificates</h2>
-          <p>
-            I have a few personal projects & certificate which I have worked on
-            in my own time (projects can also be found on my GitHub).
-          </p>
-          <div class="box" style="background-color: #80abdd3d">
+          <div>
             <p>
-              <a
-                href="https://www.coursera.org/account/accomplishments/verify/VF56DJQRF2H3"
-                target="_blank">Kotlin for Java Developers</a
-              >
+              I have a few personal projects & certificates which I have worked
+              on in my own time (projects can also be found on my GitHub
+              account).
             </p>
+            <div>
+              <p>
+                1. Coursera - <a
+                  href="https://www.coursera.org/account/accomplishments/verify/VF56DJQRF2H3"
+                  target="_blank">Kotlin for Java Developers</a
+                >: Completed {dateToString(new Date("2025-09-29"))} | ~25 hours |
+                Grade 100%.
+              </p>
+            </div>
+            <div>
+              <p>
+                2. GitHub Project - <a
+                  href="https://github.com/JoeSheen/vault_rs"
+                  target="_blank">vault_rs</a
+                >: CLI tool for managing passwords | Strengthening Rust
+                knowledge via secure, real-world coding | <span
+                  class="in-progress">In Progress</span
+                >.
+              </p>
+            </div>
+            <div>
+              <p>
+                3. GitHub Project - <a
+                  href="https://github.com/JoeSheen/zephyr"
+                  target="_blank">zephyr</a
+                >: A journaling web application built using Ktor | Project to
+                continue developing my Kotlin skills and solidify my
+                understanding of core plugins within the Ktor ecosystem | <span
+                  class="in-progress">In Progress</span
+                >.
+              </p>
+            </div>
+            <div>
+              <p>
+                4. Coursera - <a
+                  href="https://www.comptia.org/en-gb/certifications/security/"
+                  target="_blank">CompTIA Security+ Certification (701)</a
+                >: Started {dateToString(new Date("2025-11-06"))} | <span
+                  class="in-progress">In Progress</span
+                >.
+              </p>
+            </div>
           </div>
-          <div class="box" style="background-color: #80abdd3d">
-            <p>
-              <a>vault_rs</a>
-            </p>
-          </div>
-        </div-->
+        </div>
         <!--div class="now section-style">
           <h2>/Now</h2>
         </div-->
@@ -261,6 +293,10 @@ const dateToString = (date: Date): string => {
     margin-top: -20px;
   }
 
+  .in-progress {
+    font-style: italic;
+  }
+
   .personal-projects,
   .why-shoejs,
   .now,
@@ -299,20 +335,6 @@ const dateToString = (date: Date): string => {
     transform: translateY(-2px);
   }
 
-  /*.box {
-    max-width: 800px;
-    margin: 0px auto;
-    padding: 25px 25px;
-    background: #fff;
-    background-color: rgb(255, 255, 255);
-    border-radius: 16px;
-    box-shadow: 0 14px 12px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }*/
-
   .name-span {
     font-style: italic;
     color: var(--tomato);
@@ -331,6 +353,11 @@ const dateToString = (date: Date): string => {
     margin: 15px auto;
     padding: 7px;
     text-align: center;
+  }
+
+  th {
+    background-color: var(--onyx);
+    color: var(--sandy-brown);
   }
 
   tr:hover {

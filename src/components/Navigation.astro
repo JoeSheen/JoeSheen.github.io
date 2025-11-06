@@ -11,7 +11,7 @@ const defaultTitle = "Joe Sheen - Software Engineer";
 ---
 
 <div class="navbar-container">
-  <h1>
+  <h1 class="title-style">
     {
       () => {
         if (title === undefined) {
@@ -40,6 +40,11 @@ const defaultTitle = "Joe Sheen - Software Engineer";
     padding-bottom: 15px;
     background-color: var(--onyx);
     color: var(--tropical-indigo);
+  }
+
+  .title-style {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   a {
